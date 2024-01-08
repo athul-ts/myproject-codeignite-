@@ -27,11 +27,19 @@ class Registration extends CI_Controller {
             ];
     
             $data2 = [
+                'user_name' => $this->input->post('first_name') . '' . $this->input->post('last_name'),
                 'email' => $this->input->post('email'),
                 'password' => $this->input->post('password')
             ];
     
             $this->load->model('UserModel');
+            $this->UserModel->insertUser($data1,$data2);
+
+            // $last_insert_id = $this->UserModel->getInsertID();
+
+		    // echo $last_insert_id;
+
+
 
             // var_dump($data1);
             // var_dump($data2);
