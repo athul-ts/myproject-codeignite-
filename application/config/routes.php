@@ -64,4 +64,9 @@ $route['login']['GET'] = 'loginc';
 $route['login']['POST'] = 'loginc/flogin';
 
 
+$route['home']['GET'] = 'homec';
+
+
+
+
 

@@ -52,8 +52,8 @@ class Loginc extends CI_Controller {
 			if($result != false){
 
 				$auth_userdetails = [
-					'user_name' => $result->user_name,
-					'email' => $result->email
+					'user_name' => $result->user_name
+					// ,'email' => $result->email
 				];
 
 				$this->session->set_userdata('authenticated','1');
