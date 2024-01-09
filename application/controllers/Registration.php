@@ -3,7 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Registration extends CI_Controller {
 
-	
+	// public function __construct(){
+    //     parent::__construct();
+    //     $this->load->model('form_validation');
+    // }
+
 	public function index()
 	{
 		$this->load->view('registration');
@@ -34,15 +38,6 @@ class Registration extends CI_Controller {
     
             $this->load->model('UserModel');
             $this->UserModel->insertUser($data1,$data2);
-
-            // $last_insert_id = $this->UserModel->getInsertID();
-
-		    // echo $last_insert_id;
-
-
-
-            // var_dump($data1);
-            // var_dump($data2);
         }
         else{
             $this->index();
